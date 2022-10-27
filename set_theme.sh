@@ -137,7 +137,8 @@ read_char() {
 
 
 list_themes() {
-	find "$HOME/install_spicetify/spicetify-themes" -maxdepth 2 -type f -iname '*.png' -exec sh -c 'echo $(basename {} .png) $(basename $(dirname {}))' \; | sort | uniq 
+	dir="$(find "$HOME" -maxdepth 3 -type d -iname 'spicetify-themes' | head -n1)"
+	find "$dir" -maxdepth 2 -type f -iname '*.png' -exec sh -c 'echo $(basename {} .png) $(basename $(dirname {}))' \; | sort | uniq 
 }
 
 set_theme() {
