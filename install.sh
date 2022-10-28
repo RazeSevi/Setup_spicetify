@@ -24,3 +24,6 @@ else
 fi
 cd spicetify-themes
 cp -r * ~/.config/spicetify/Themes
+
+#If you want to set your own theme, you have ta create your own theme in ~/.config/spicetify/Themes. 
+# Not in the cloned directory.
